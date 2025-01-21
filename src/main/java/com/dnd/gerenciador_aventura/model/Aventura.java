@@ -8,11 +8,44 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "aventura")
-public record Aventura(
+public class Aventura {
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  Long id,
-  String title,
-  String adventureType
-) {
+  private Long id;
+
+  private String title;
+  private String adventureType;
+
+  public Aventura() {};
+
+  public Aventura(Long id, String title, String adventureType) {
+    this.id = id;
+    this.title = title;
+    this.adventureType = adventureType;
+  };
+
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public String getTitle() {
+    return title;
+  }
+
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
+  public String getAdventureType() {
+    return adventureType;
+  }
+
+  public void setAdventureType(String adventureType) {
+    this.adventureType = adventureType;
+  }
 }

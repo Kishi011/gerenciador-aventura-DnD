@@ -1,0 +1,1 @@
+INSERT INTO aventura(title, adventure_type) VALUES ('Ravenloft', 'Loren Ipsum');
