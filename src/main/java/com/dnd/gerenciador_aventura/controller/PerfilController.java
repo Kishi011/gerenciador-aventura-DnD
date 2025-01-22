@@ -8,24 +8,24 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dnd.gerenciador_aventura.dto.AventuraDTO;
-import com.dnd.gerenciador_aventura.services.AventuraService;
+import com.dnd.gerenciador_aventura.dto.PerfilDTO;
+import com.dnd.gerenciador_aventura.services.PerfilService;
 
 @RestController
-@RequestMapping("/aventura")
-public class AventuraController {
+@RequestMapping("/perfil")
+public class PerfilController {
 
   @Autowired
-  private AventuraService aventuraService;
+  private PerfilService perfilService;
 
   @GetMapping
-  public List<AventuraDTO> findAll() {
-    return aventuraService.findAll();
+  public List<PerfilDTO> findAll() {
+    return perfilService.findAll();
   }
 
   @GetMapping("/{id}")
-  public AventuraDTO findById(@PathVariable Long id) {
-    return aventuraService.findById(id);
+  public PerfilDTO findById(@PathVariable Long id) {
+    return perfilService.findById(id);
   }
 
   
